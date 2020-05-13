@@ -28,9 +28,9 @@ namespace InfoAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<InfoDataBaseSetting>(Configuration.GetSection(nameof(InfoDataBaseSetting)));
-            services.AddSingleton<IInfoDataBaseSetting>(sp=> sp.GetRequiredService<IOptions<InfoDataBaseSetting>>().Value);
-            services.AddSingleton<IInfoService, InfoService>();
+            services.Configure<InformationDataBaseSetting>(Configuration.GetSection(nameof(InformationDataBaseSetting)));
+            services.AddSingleton<IInformationDataBaseSetting>(sp=> sp.GetRequiredService<IOptions<InformationDataBaseSetting>>().Value);
+            services.AddSingleton<IInformationService, InformationService>();
             services.AddControllers();
         }
 

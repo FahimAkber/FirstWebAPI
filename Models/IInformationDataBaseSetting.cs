@@ -1,6 +1,6 @@
 namespace InfoAPI.Models
 {
-    public interface IInfoDataBaseSetting
+    public interface IInformationDataBaseSetting
     {
          string CollectionName{get; set;}
          string ConnectionPort{get; set;}
